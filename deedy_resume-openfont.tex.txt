@@ -1,0 +1,264 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Mitesh Patel
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Mitesh}{Patel}{ \urlstyle{same}
+682.561.4578 | \href{mailto:mspatel2696@gmail.com}{mspatel2696@gmail.com}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Texas A\&M University}
+\descript{Computer Science (B.S)}
+\location{Graduated May 2018}
+Distinguished Honors (Spring 2017, 18) \\
+\location{ Cum. GPA: 3.4 / 4.0 \\
+Major GPA: 3.3 / 4.0}
+\sectionsep
+
+% \subsection{Cornell University}
+% \descript{BS in Computer Science}
+% \location{May 2014 | Ithaca, NY}
+% College of Engineering \\
+% Magna Cum Laude\\
+% \location{ Cum. GPA: 3.83 / 4.0 \\
+% Major GPA: 3.9 / 4.0}
+% \sectionsep
+
+% \subsection{La Martiniere for Boys}
+% \location{Grad. May 2011|  Kolkata, India}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Connect} 
+Github:// \href{https://github.com/miteshp0}{\bf MiteshP0} \\
+LinkedIn://  \href{https://www.linkedin.com/miteshp0}{\bf MiteshP0} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Relevant Courses}
+\subsection{Undergraduate}
+Cloud Computing \\
+Data Structure \& Algorithms \\
+Database Systems \\
+Design \& Analysis of Algorithms \\
+Distributed Systems \\
+Human Computer Interaction \\
+Information Storage \& Retrieval \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Most Experience}
+Python, Java, Ruby, Groovy, \\
+C/C++, Javascript, Shell, MySQL, \\
+mongoDB, HTML, CSS Oracle Cloud \\
+
+\subsection{Tools \& Concepts}
+Docker, Kubernetes, Openshift, \\
+GitLab/Git/SCM, Jenkins, CI/CD, Node.js, \\
+AWS. OCI, GCP, Chef/Ansible, \\
+Agile Development/Scrum/Kanban, \\
+Eclipse, vi, VSCode, Confluence, Jira, \\
+SQL/NOSQL, RHEL, Oracle Linux
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Certifcations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Certifications}
+Oracle Cloud Infrastructure Architect Associate \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Certifcations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Activities}
+\textbullet{ Citi Recruiting Hackathon (1st)} \\
+\textbullet{ Hitachi Robotics Hackathon (1st)} \\
+\textbullet{ Code Fest Cisco Hackathon} \\
+\textbullet{ TAMUHack 2017} \\
+\textbullet{ Texas A\&M Computing Society} \\
+\textbullet{ The Big Event Volunteering} \\
+\textbullet{ Phi Eta Sigma National Honor Society} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Oracle}
+\location{| Dec 2019 - Present | Frisco, TX}
+\descript{Software Developer (Full-time) }
+\vspace{\topsep}
+\begin{tightemize}
+\item Reconstructed project build components to utilize Oracle Cloud Infrastructure OS and OCIR, resulting in reduced licensing cost.
+\item Deployed our cloud native logging service based on the ELK stack using K8s and OCI. Automated parts of this deployment process using GitLab CI pipelines.
+\item Utilized python to maintain the logging service, along with Docker to assist in containerization.
+\item Troubleshooted using Kubernetes to resolve issues that emerge while running a cloud native service.
+\item Worked in both Kanban and two week sprints to deliver to our partners.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Citi}
+\location{| June 2018 – Dec 2019 | Irving, TX}
+\descript{Infrastructure Automation Engineer (Full-time)}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Improved developer workflow by innovating a Jenkins pipeline for users.
+\item Finalized the cookbook life-cycle process by automating the decommissioning procedure from DEV, UAT, and PROD environments.
+\item Developed various Chef REST API solutions for internal teams.
+\item Automated vulnerability checks of docker images using python \& AWS.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Citi}
+\location{| June 2017 – Aug 2017 | Irving, TX}
+\descript{Systems Software Engineer (Intern)}
+\begin{tightemize}
+\item Utilized Docker to containerize a training module reminder application.
+\item Deployed applications to the OpenShift environment using docker containers \& K8s, resulting in reduced company costs on physical hardware.
+\item Authored technical doc/videos pertaining to the ECS project.
+\item Presented final work to the CTO of our organization.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Cisco Systems}
+\location{| May 2016 – Aug 2016 | Richardson, TX}
+\descript{Software Engineer (Intern)}
+\begin{tightemize}
+\item Created a python application that accessed issues in JIRA using REST API calls. Generated a report from the extracted data, and sent to engineers for observation.
+\item Developed a Root Cause Analysis Automation Tool that analyzed and diagnosed various log files for Jenkins builds that failed, and updated the failed ticket on the front-end side for engineers to observe.
+\item Relieved hours worth of time by automating the RCA process.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Selected Projects}
+\runsubsection{Patient Search EHR System} \\
+\location{(3-team) Undergraduate Capstone}
+Worked with {\href{https://people.engr.tamu.edu/bobakm/index.html}{Prof Bobak Mortazavi}} and several undergraduate students to 
+create Patient Search, a tool which utilizes a large database of mock patient
+data and end users are able to enter advanced queries (processed using NLP)
+to retrieve information in an extremely quick and efficient manner. For this project the back end infrastructure was hosted on Google Cloud!
+\sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     AWARDS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+% 2013	     & National  & Jump Trading Challenge Finalist\\
+% 2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+% 2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+% 2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+% \end{tabular}
+% \sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     PUBLICATIONS
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
